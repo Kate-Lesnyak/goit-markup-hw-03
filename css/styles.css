@@ -69,7 +69,9 @@ img {
 }
 
 .logo:hover,
-.logo:focus {
+.logo:focus,
+.page-footer .logo:hover,
+.page-footer .logo:focus {
   color: var(--accent-color);
 }
 
@@ -385,8 +387,6 @@ address {
 .contacts-item .button:focus {
   color: var(--accent-color);
 }
-
-
 
 /* Styles for Portfolio */
 

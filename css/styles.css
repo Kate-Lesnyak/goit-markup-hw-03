@@ -40,6 +40,22 @@ body {
   letter-spacing: 0.03em;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
 img {
   display: block;
@@ -75,11 +91,6 @@ img {
   color: var(--accent-color);
 }
 
-.list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
 
 /* Page-header */
 
@@ -177,7 +188,6 @@ img {
 }
 
 .hero-title {
-  margin-top: 0;
   margin-bottom: 30px;
 
   color: var(--primary-white-color);
@@ -226,7 +236,6 @@ button {
 }
 
 .section-title {
-  margin-top: 0;
   margin-bottom: 50px;
 
   color: var(--title-text-color);
@@ -239,15 +248,15 @@ button {
 
 .features-list .title,
 .team-list .title {
-  margin-top: 0;
   margin-bottom: 10px;
 
   color: var(--title-text-color);
 }
 
-/* Features */
+/* Features and Portfolio*/
 
-.section-title.visually-hidden {
+.section-title.visually-hidden,
+.portfolio-title.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -259,6 +268,8 @@ button {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+/* Features */
 
 .features-list {
   display: flex;
@@ -280,10 +291,8 @@ button {
 }
 
 .features-item .text {
-  margin-top: 0;
   margin-bottom: 0;
 }
-
 
 /* Functions  */
 
@@ -327,11 +336,6 @@ button {
   line-height: 1.19;
 }
 
-.team-item .text {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
 .team-item {
   width: calc((100% - 90px) / 4);
   text-align: center;
@@ -373,7 +377,6 @@ address {
 .contacts-item .link {
   color: var(--primary-white-color);
   text-decoration: none;
-
 }
 
 .contacts-item .button {
@@ -388,25 +391,14 @@ address {
   color: var(--accent-color);
 }
 
+.contacts-list .contacts-item+.contacts-item {
+  margin-top: 9px;
+}
+
 /* Styles for Portfolio */
 
 .portfolio-title {
-  margin-top: 0;
-  margin-bottom: 0;
   color: var(--title-text-color);
-}
-
-.portfolio-title.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
 
 /*  Button-portfolio  */
@@ -450,7 +442,6 @@ address {
 }
 
 .card-set .title {
-  margin-top: 0;
   margin-bottom: 4px;
 
   color: var(--title-text-color);
@@ -460,9 +451,6 @@ address {
 }
 
 .card-set .text {
-  margin-top: 0;
-  margin-bottom: 0;
-
   color: var(--primary-text-color);
   font-size: 16px;
   line-height: 1.88;
@@ -470,10 +458,12 @@ address {
 
 .card-content {
   padding: 20px 24px;
-  border: 1px solid var(--border-color);
+  border-right: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  border-left: 1px solid var(--border-color);
 }
 
-.card-set .list {
+.card-set-list {
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--card-set-gap));
